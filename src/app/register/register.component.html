@@ -1,0 +1,78 @@
+  <app-navbar></app-navbar>
+    <div class="row container mt-4" style="position:absolute; left:35%">
+      <div class="jumbotron col-6">
+        <form class="was-validated" method="post" id="studentForm" name="studentForm" (ngSubmit)="regStudent(studentData.value)" #studentData="ngForm" >
+
+      <div class="form-group">
+          <label for="name"><b>Name:</b></label>
+          <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required #nameREf="ngModel" ngModel>
+          
+          <br />
+          <!-- Checking for blank Name field -->
+          <div *ngIf="nameREf.invalid && (nameREf.dirty || nameREf.touched||checkvalid)" class="alert alert-danger">
+            <div *ngIf="nameREf.errors.required">
+            Name is mandatory
+          </div>
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label for="address"><b>Address:</b></label>
+          <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="marks"><b>Percentage of H.S. Marks:</b></label>
+          <input type="text" class="form-control" id="marks" placeholder="Percentage of H.S. Marks" name="marks" required #marksREf="ngModel" ngModel>
+         
+          <br />
+          <!-- Checking for blank Name field -->
+          <div *ngIf="marksREf.invalid && (marksREf.dirty || marksREf.touched||checkvalid)" class="alert alert-danger">
+            <div *ngIf="marksREf.errors.required">
+            Percentage of marks is mandatory
+          </div>
+          </div>
+
+      </div>
+      <div class="form-group">
+          <label for="board"><b>Board:</b></label>
+          <input type="text" class="form-control" id="board" placeholder="Board" name="board" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="stream"><b>Preferred Stream:</b></label>
+          <select class="form-control" id="stream" name="stream" ngModel>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>ME</option>
+              <option>CE</option>
+              <option>EE</option>
+              <option>ECE</option>
+              <option>EEE</option>
+            </select>
+      </div>
+      <div style="text-align:center">
+      <input class="btn btn-success mr-5" type="submit" value="Register">
+      <input class="btn btn-danger ml-5" type="reset" value="Reset">
+      </div>
+
+      </form>
+    </div>
+    </div>
+
+    
+    <!-- Modal -->
+<div *ngIf = "isRegistered" id="myModal" class="modal fade" role="dialog" >
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <b>{{confirmationString}}</b>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  

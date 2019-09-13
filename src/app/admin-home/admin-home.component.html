@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark container mt-3 " style="border-radius: 30px">  
+  <div class="mr-5 col-3">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToRYi-Uu2IfUldjH7HZ20VEsa3JRmB27jf4GatPtjY0RUmQNPH" height="60px" width="60px">
+    </div> 
+      <div class="navbar-nav ml-5  col-6 text-center" style="font-size:18px">
+        <h3 class="nav-item nav-link" >Welcome Admin</h3>
+      </div>
+      <div class="col-3" > 
+      <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" >Logout</button>
+    </div>
+  </nav>
+
+<!-- Modal Start -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" style="text-align: left">
+  <p>Are you sure you want to logout?</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+  <!-- On logout confirmation, logout() function is called -->
+  <button type="button" class="btn btn-success" (click)="logout()" data-dismiss="modal">Yes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal End -->
+
+
+<div class="container mt-5">
+  <table class="table text-center">
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Marks</th>
+      <th>Board</th>
+      <th>Stream</th>
+      <th>Address</th>
+    </tr>
+    <tr  *ngFor="let list of students; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{list.name}}</td>
+      <td>{{list.marks}}</td>
+      <td>{{list.board}}</td>
+      <td>{{list.stream}}</td>
+      <td>{{list.address}}</td>
+    </tr>
+  
+  </table>
+  </div>

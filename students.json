@@ -1,0 +1,68 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "David",
+      "address": "NYC",
+      "marks": "90",
+      "board": "CBSE",
+      "stream": "IT"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "96",
+      "board": "",
+      "stream": "",
+      "id": "5H3BThV"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "96",
+      "board": "",
+      "stream": "",
+      "id": "Ew_3Yrq"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "96",
+      "board": "",
+      "stream": "",
+      "id": "zcuPPCG"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "96",
+      "board": "USBSE",
+      "stream": "ME",
+      "id": "GDiRMV9"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "96",
+      "board": "USBSE",
+      "stream": "ME",
+      "id": "AJYd6WV"
+    },
+    {
+      "name": "shany",
+      "address": "DownTown",
+      "marks": "99",
+      "board": "CBSE",
+      "stream": "EEE",
+      "id": "P-yO-gt"
+    },
+    {
+      "name": "abc",
+      "address": "NYC",
+      "marks": "99",
+      "board": "CBSE",
+      "stream": "IT",
+      "id": "N3L5Wn4"
+    }
+  ]
+}
